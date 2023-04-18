@@ -81,7 +81,7 @@ body {
 input{
 
 :checked  .slider {
-  background-color: colors.$color2;
+  background-color: colors.$color1;
 }
 // :focus .slider {
 //   box-shadow: 0 0 1px #50bfe6;
@@ -158,17 +158,17 @@ h2{
     font-size: 1.4em;
     margin: 15px 15px;
     border-radius: 50px;
-    color: #f4f4f4;
     transition: all 0.3s ease 0s;
+    text-transform: uppercase;
   }
-// :hover{
-//     background-color: transparent;
-//     border: 1px solid white;
-//   }
-// }
-  // :focus {
-  //  color:black;
-  // }
+:hover{
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+  :focus {
+   color:black;
+  }
   
   .button1,.button3 {
     @include linear;
@@ -185,7 +185,7 @@ h2{
     color:colors.$color2;
     width: 50%;
   }
-}
+
   
   @media(min-width:900px){
     body{

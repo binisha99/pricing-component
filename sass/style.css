@@ -62,7 +62,7 @@ body {
   transition: 0.4s;
 }
 .content input :checked .slider {
-  background-color: hsl(237, 63%, 64%);
+  background-color: hsl(236, 72%, 79%);
 }
 .content .slider.round {
   border-radius: 2.125rem;
@@ -136,19 +136,29 @@ body {
   font-size: 1.4em;
   margin: 15px 15px;
   border-radius: 50px;
-  color: #f4f4f4;
   transition: all 0.3s ease 0s;
+  text-transform: uppercase;
 }
-.package-container .button1, .package-container .button3 {
+.package-container :hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+:focus {
+  color: black;
+}
+
+.button1, .button3 {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(240, 78%, 98%);
   border-radius: 0.75rem;
   width: 50%;
 }
-.package-container .button1 :hover, .package-container .button3 :hover {
+.button1 :hover, .button3 :hover {
   background: transparent;
 }
-.package-container .button2 {
+
+.button2 {
   background: hsl(240, 78%, 98%);
   color: hsl(237, 63%, 64%);
   width: 50%;
