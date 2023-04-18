@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+body {
+  background-color: #f4f4f4;
+  background-image: url("/images/bg-top.svg");
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: top -1.5rem right -6rem;
+  background-size: 50% 50%;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 700;
+}
+
+.container {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .price {
+  font-size: 2.2em;
+  color: hsl(232, 13%, 33%);
+}
+.content span {
+  color: hsl(233, 13%, 49%);
+}
+.content .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.content input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(237, 63%, 64%);
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+.content :before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.content input :checked .slider {
+  background-color: hsl(237, 63%, 64%);
+}
+.content .slider.round {
+  border-radius: 2.125rem;
+}
+.content :before {
+  border-radius: 50%;
+}
+
+.package-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.package-container .title {
+  color: hsl(232, 13%, 33%);
+  font-size: 1.375rem;
+  margin-top: 1.75rem;
+}
+.package-container .title_middle {
+  color: hsl(232, 13%, 33%);
+  font-size: 1.375rem;
+  margin-top: 1.75rem;
+  color: hsl(240, 78%, 98%);
+}
+.package-container .packages {
+  margin: 20px;
+  width: 300px;
+  padding-bottom: 1.5em;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  color: hsl(232, 13%, 33%);
+}
+.package-container .linear {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: hsl(240, 78%, 98%);
+  border-radius: 0.75rem;
+}
+.package-container h2 {
+  font-size: 2.188rem;
+  margin: 0;
+}
+.package-container .list li {
+  list-style: none;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  border-width: 1px;
+  padding: 10px;
+}
+.package-container .list {
+  width: 80%;
+}
+.package-container ul {
+  padding: 0;
+}
+.package-container input, .package-container label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+.package-container .button {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.4em;
+  margin: 15px 15px;
+  border-radius: 50px;
+  color: #f4f4f4;
+  transition: all 0.3s ease 0s;
+}
+.package-container .button1, .package-container .button3 {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: hsl(240, 78%, 98%);
+  border-radius: 0.75rem;
+  width: 50%;
+}
+.package-container .button1 :hover, .package-container .button3 :hover {
+  background: transparent;
+}
+.package-container .button2 {
+  background: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+  width: 50%;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-color: hsl(240, 78%, 98%);
+    background-position-x: right, left;
+    background-position-y: 0%, bottom;
+  }
+  .package-container .packages {
+    margin: 2.813rem 0;
+  }
+  .package-container .linear {
+    z-index: 4;
+  }
+}/*# sourceMappingURL=style.css.map */
