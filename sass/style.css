@@ -61,13 +61,15 @@ body {
   background-color: white;
   transition: 0.4s;
 }
-.content input :checked .slider {
-  background-color: hsl(236, 72%, 79%);
+.content input:checked + .slider {
+  background-color: hsl(233, 13%, 49%);
 }
-.content .slider.round {
+
+.slider.round {
   border-radius: 2.125rem;
 }
-.content :before {
+
+:before {
   border-radius: 50%;
 }
 
@@ -76,15 +78,16 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  font-family: inherit;
 }
 .package-container .title {
   color: hsl(232, 13%, 33%);
-  font-size: 1.375rem;
+  font-size: 18px;
   margin-top: 1.75rem;
 }
 .package-container .title_middle {
   color: hsl(232, 13%, 33%);
-  font-size: 1.375rem;
+  font-size: 18px;
   margin-top: 1.75rem;
   color: hsl(240, 78%, 98%);
 }
@@ -108,7 +111,7 @@ body {
   border-radius: 0.75rem;
 }
 .package-container h2 {
-  font-size: 2.188rem;
+  font-size: 3.188rem;
   margin: 0;
 }
 .package-container .list li {
@@ -125,7 +128,8 @@ body {
 .package-container ul {
   padding: 0;
 }
-.package-container input, .package-container label {
+.package-container input,
+.package-container label {
   display: inline-block;
   vertical-align: middle;
   margin: 10px 0;
@@ -139,43 +143,41 @@ body {
   transition: all 0.3s ease 0s;
   text-transform: uppercase;
 }
-.package-container :hover {
-  background-color: transparent;
-  border: 1px solid white;
-}
-
-:focus {
-  color: black;
-}
-
-.button1, .button3 {
+.package-container .button1,
+.package-container .button3 {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(240, 78%, 98%);
   border-radius: 0.75rem;
   width: 50%;
 }
-.button1 :hover, .button3 :hover {
+.package-container .button1:hover,
+.package-container .button3:hover {
   background: transparent;
+  border: 1px solid;
+  color: hsl(237, 63%, 64%);
 }
-
-.button2 {
+.package-container .button2 {
   background: hsl(240, 78%, 98%);
   color: hsl(237, 63%, 64%);
   width: 50%;
 }
-
+.package-container .button2:hover {
+  background: transparent;
+  border: 1px solid;
+  color: hsl(240, 78%, 98%);
+}
 @media (min-width: 900px) {
-  body {
+  .package-container body {
     background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
     background-repeat: no-repeat, no-repeat;
     background-color: hsl(240, 78%, 98%);
     background-position-x: right, left;
     background-position-y: 0%, bottom;
   }
-  .package-container .packages {
+  .package-container .package-container .packages {
     margin: 2.813rem 0;
   }
-  .package-container .linear {
+  .package-container .package-container .packages .linear {
     z-index: 4;
   }
 }/*# sourceMappingURL=style.css.map */

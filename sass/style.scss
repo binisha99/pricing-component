@@ -1,91 +1,82 @@
-@use './colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@use "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-@mixin linear(){
-    background:linear-gradient(
-        colors.$color1,
-        colors.$color2
-    );
-    color:colors.$Very-Light-Grayish-Blue;
-    border-radius:0.75rem;
+@mixin linear() {
+  background: linear-gradient(colors.$color1, colors.$color2);
+  color: colors.$Very-Light-Grayish-Blue;
+  border-radius: 0.75rem;
 }
-@mixin titles(){
-color:colors.$Dark-Grayish-Blue;
-font-size: 1.375rem;
-margin-top:1.75rem;
+@mixin titles() {
+  color: colors.$Dark-Grayish-Blue;
+  font-size: 18px;
+  margin-top: 1.75rem;
 }
 body {
-    background-color: #f4f4f4;
-    background-image: url('/images/bg-top.svg');
-            margin: 0 auto;
-            background-repeat: no-repeat;
-            background-position:top -1.5rem right -6rem;
-            background-size: 50% 50%;
-            width: 100%;
-            height: 100%;
-    font-family: 'Montserrat',sans-serif;
-    font-size: 0.938rem;
-    font-weight: 700;
-  }
-  
-  .container {
-    width: 100%;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-      
-  .price
-  {
-   font-size: 2.2em;
-   color:colors.$Dark-Grayish-Blue;
- }
-   span{
-    color:colors.$Grayish-Blue;
-   }
- .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
- input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  background-color: #f4f4f4;
+  background-image: url("/images/bg-top.svg");
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: top -1.5rem right -6rem;
+  background-size: 50% 50%;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 700;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: colors.$color2;
-  transform: translate(0px, 0px);
-  transition: 0.6s ease transform, 0.6s box-shadow;
+.container {
+  width: 100%;
 }
-:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-input{
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-:checked  .slider {
-  background-color: colors.$color1;
-}
-// :focus .slider {
-//   box-shadow: 0 0 1px #50bfe6;
-// }
+  .price {
+    font-size: 2.2em;
+    color: colors.$Dark-Grayish-Blue;
+  }
+  span {
+    color: colors.$Grayish-Blue;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: colors.$color2;
+    transform: translate(0px, 0px);
+    transition: 0.6s ease transform, 0.6s box-shadow;
+  }
+  :before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  input:checked + .slider {
+    background-color: colors.$Grayish-Blue;
+  }
 }
 .slider.round {
   border-radius: 2.125rem;
@@ -94,43 +85,40 @@ input{
   border-radius: 50%;
 }
 
+.package-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+font-family: inherit;
+  .title {
+    @include titles;
   }
-  .package-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-   .title{
-@include titles;
-
- }
- .title_middle{
-  @include titles;
-  color:colors.$Very-Light-Grayish-Blue;
- }
+  .title_middle {
+    @include titles;
+    color: colors.$Very-Light-Grayish-Blue;
+  }
   .packages {
     margin: 20px;
     width: 300px;
     padding-bottom: 1.5em;
     height: 100%;
-    background-color:white;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius:1rem;
-        flex-wrap: wrap;
-color: colors.$Dark-Grayish-Blue;
-
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    color: colors.$Dark-Grayish-Blue;
   }
-.linear{
-  @include linear;
-}
-h2{
-  font-size: 2.188rem;
-  margin:0;
-}
+  .linear {
+    @include linear;
+  }
+  h2 {
+    font-size: 3.188rem;;
+    margin: 0;
+  }
   .list li {
     // font-size: 20px;
     list-style: none;
@@ -139,19 +127,20 @@ h2{
     border-width: 1px;
     padding: 10px;
   }
-  
+
   .list {
     width: 80%;
   }
   ul {
     padding: 0;
   }
-  input,label {
+  input,
+  label {
     display: inline-block;
     vertical-align: middle;
     margin: 10px 0;
   }
-  
+
   .button {
     padding: 10px 30px;
     text-decoration: none;
@@ -161,48 +150,45 @@ h2{
     transition: all 0.3s ease 0s;
     text-transform: uppercase;
   }
-:hover{
-    background-color: transparent;
-    border: 1px solid white;
-  }
-}
-  :focus {
-   color:black;
-  }
   
-  .button1,.button3 {
+  .button1,
+  .button3 {
     @include linear;
-    width:50%;
-  
-    :hover{
+    width: 50%;
+    &:hover {
       background: transparent;
+      border: 1px solid;
+      color: colors.$color2;
     }
   }
 
-  
   .button2 {
-    background:colors.$Very-Light-Grayish-Blue;
-    color:colors.$color2;
+    background: colors.$Very-Light-Grayish-Blue;
+    color: colors.$color2;
     width: 50%;
+    &:hover {
+      background: transparent;
+      border: 1px solid;
+      color: colors.$Very-Light-Grayish-Blue;
+    }
   }
 
-  
-  @media(min-width:900px){
-    body{
-      background-image: url('/images/bg-top.svg'),
-      url('/images/bg-bottom.svg');
+  @media (min-width: 900px) {
+    body {
+      background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
       background-repeat: no-repeat, no-repeat;
       background-color: colors.$Very-Light-Grayish-Blue;
       background-position-x: right, left;
       background-position-y: 0%, bottom;
     }
-   .package-container{
-    .packages{
-      margin:2.813rem 0;
-      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    .package-container {
+      .packages {
+        margin: 2.813rem 0;
+      .linear {
+        z-index: 4;
+      }
     }
-    .linear{
-      z-index:4;
-    }
-   }
   }
+}
+}
